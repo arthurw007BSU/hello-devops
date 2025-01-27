@@ -4,6 +4,9 @@ public class FactorialService
 {
     public static int Factorial(int n){
 
+        if(n<0){
+            throw new InvalidOperationException("negative numbers do not have a propper factorial!");
+        }
         if(n==0 || n==1){  //0! = 1     1! = 1
             return 1;
         }
